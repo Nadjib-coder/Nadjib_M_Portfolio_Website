@@ -32,7 +32,6 @@ Here are some of the key projects you will find on my website:
 - Mock API
 - Axios
 
-
 ## Contact
 
 Feel free to reach out to me via [nadjibmouhoun1@gmail.com](mailto:nadjibmouhoun1@gmail.com) or connect with me on [LinkedIn](https://www.linkedin.com/in/nadjib-mouhoun/).
