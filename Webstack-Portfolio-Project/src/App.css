@@ -1,0 +1,77 @@
+/* start NavBar css */
+.navBar {
+  background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url('./assets/image.png');
+  
+}
+.navBar .navbar-brand,
+.navBar .nav-link,
+.navBar .offcanvas-title {
+  color: white !important;
+}
+
+.navBar .nav-link.active {
+  color: #f8f9fa !important; /* Adjust the color for the active link if needed */
+}
+
+.navBar .navbar-toggler {
+  border-color: white !important;
+}
+
+.navBar .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba%28255, 255, 255, 1%29' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E") !important;
+}
+/* end NavBar css */
+
+/* start Home css */
+.home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 60px;
+  color: #fff;
+  min-height: 100vh;
+  width: 100%;
+  background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url('/assets/image.png');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.home .text-box {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+/* end Home css */
+
+/* start About css */
+.about {
+  padding-top: 60px;
+}
+
+.about .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.about .content {
+  width: 67%;
+}
+
+.about .content p {
+  font-size: 1.1rem;
+}
+
+.personal-image {
+  width: 27%;
+  border-radius: 10px;
+}
+/* end About css */
+
+/* start Skills css */
+/* end Skills css */
+
+
