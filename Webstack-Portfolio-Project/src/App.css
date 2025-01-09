@@ -4,13 +4,19 @@
   
 }
 .navBar .navbar-brand,
-.navBar .nav-link,
 .navBar .offcanvas-title {
   color: white !important;
 }
 
-.navBar .nav-link.active {
-  color: #f8f9fa !important; /* Adjust the color for the active link*/
+
+.navBar .nav-link {
+  cursor: pointer;
+  text-decoration: none;
+  color: white !important;
+}
+
+.navBar .nav-link:hover {
+  color: #94caff !important; /* Adjust the hover color if needed */
 }
 
 .navBar .navbar-toggler {
@@ -236,7 +242,31 @@
 /* end Projects css */
 
 /* start Contact css */
+.contact {
+  background-color: #F4F4F4;
+  padding: 60px 0;
+  
+}
+.contact h1 {
+  text-align: center;
+  margin-bottom: 60px;
+}
 
+.contact .contact-info {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row-reverse;
+}
+@media screen and (max-width: 768px) {
+  .contact .contact-info {
+    flex-direction: column;
+  }
+  .contact .contact-info iframe {
+    margin-bottom: 30px;
+  }
+  
+}
 /* end Contact css */
 
 

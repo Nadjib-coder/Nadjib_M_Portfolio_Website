@@ -3,14 +3,15 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import Offcanvas from 'react-bootstrap/Offcanvas';
+import { Link } from 'react-scroll';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 export default function Header() {
   const [activeLink, setActiveLink] = useState('home');
   const expand = 'md';
 
-  const handleSelect = (eventKey) => {
-    setActiveLink(eventKey);
+  const handleSetActive = (to) => {
+    setActiveLink(to);
   };
 
   return (
@@ -23,8 +24,8 @@ export default function Header() {
       <Container fluid>
         <Navbar.Brand href="#">Nadjib M</Navbar.Brand>
         <Navbar.Toggle
-          className="navbar-toggler-white"
           aria-controls={`offcanvasNavbar-expand-${expand}`}
+          className="navbar-toggler-white"
         />
         <Navbar.Offcanvas
           id={`offcanvasNavbar-expand-${expand}`}
@@ -32,51 +33,66 @@ export default function Header() {
           placement="end"
         >
           <Offcanvas.Header closeButton>
-            <Offcanvas.Title id={`offcanvasNavbarLabel-expand-${expand}`}>
+            <Offcanvas.Title
+              id={`offcanvasNavbarLabel-expand-${expand}`}
+              className="text-white offcanvas-title"
+            >
               Nadjib M
             </Offcanvas.Title>
           </Offcanvas.Header>
           <Offcanvas.Body>
-            <Nav
-              className="justify-content-end flex-grow-1 pe-3"
-              activeKey={activeLink}
-              onSelect={handleSelect}
-            >
-              <Nav.Link
-                eventKey="home"
-                href="#home"
-                className={activeLink === 'home' ? 'active' : ''}
+            <Nav className="justify-content-end flex-grow-1 pe-3">
+              <Link
+                to="home"
+                smooth={true}
+                duration={500}
+                className={`nav-link ${activeLink === 'home' ? 'active' : ''}`}
+                onSetActive={handleSetActive}
               >
                 Home
-              </Nav.Link>
-              <Nav.Link
-                eventKey="about"
-                href="#about"
-                className={activeLink === 'about' ? 'active' : ''}
+              </Link>
+              <Link
+                to="about"
+                smooth={true}
+                duration={500}
+                className={`nav-link ${activeLink === 'about' ? 'active' : ''}`}
+                onSetActive={handleSetActive}
               >
                 About
-              </Nav.Link>
-              <Nav.Link
-                eventKey="skills"
-                href="#skills"
-                className={activeLink === 'skills' ? 'active' : ''}
+              </Link>
+              <Link
+                to="skills"
+                smooth={true}
+                duration={500}
+                className={`nav-link ${
+                  activeLink === 'skills' ? 'active' : ''
+                }`}
+                onSetActive={handleSetActive}
               >
                 Skills
-              </Nav.Link>
-              <Nav.Link
-                eventKey="projects"
-                href="#projects"
-                className={activeLink === 'projects' ? 'active' : ''}
+              </Link>
+              <Link
+                to="projects"
+                smooth={true}
+                duration={500}
+                className={`nav-link ${
+                  activeLink === 'projects' ? 'active' : ''
+                }`}
+                onSetActive={handleSetActive}
               >
                 Projects
-              </Nav.Link>
-              <Nav.Link
-                eventKey="contact"
-                href="#contact"
-                className={activeLink === 'contact' ? 'active' : ''}
+              </Link>
+              <Link
+                to="contact"
+                smooth={true}
+                duration={500}
+                className={`nav-link ${
+                  activeLink === 'contact' ? 'active' : ''
+                }`}
+                onSetActive={handleSetActive}
               >
                 Contact
-              </Nav.Link>
+              </Link>
             </Nav>
           </Offcanvas.Body>
         </Navbar.Offcanvas>
