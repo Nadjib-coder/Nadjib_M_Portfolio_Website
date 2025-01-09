@@ -1,53 +1,36 @@
-import axios from 'axios';
-
 export default function Contact() {
   return (
-    <section id="contact" className="section">
-      <h2>Contact</h2>
-      <form
-        onSubmit={(e) => {
-          e.preventDefault();
-          const formData = new FormData(e.target);
-          const contactData = Object.fromEntries(formData.entries());
-          axios
-            .post('https://mockapi.io/endpoint/contact-messages', contactData)
-            .then(() => alert('Message sent!'))
-            .catch((error) => console.error('Error submitting form:', error));
-        }}
-      >
-        <div className="form-group">
-          <label htmlFor="name">Name</label>
-          <input
-            type="text"
-            id="name"
-            name="name"
-            className="form-control"
-            required
-          />
+    <section id="contact" className="section contact">
+      <h2>Contact Me</h2>
+      <iframe
+        className="map"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d99579.41434377714!2d-9.242139349748724!3d38.74405052516278!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd19331a61e4f33b%3A0x400ebbde49036d0!2sLisboa!5e0!3m2!1spt-PT!2spt!4v1736439510234!5m2!1spt-PT!2spt"
+        width={700}
+        height={330}
+        style={{ border: 0 }}
+        allowFullScreen=""
+        loading="lazy"
+      />
+      <div className="content">
+        <div>
+          <i className="fas fa-home" />
+          <h4>Dellys, Boumerdes</h4>
+          <p>Alger, Algeria</p>
         </div>
-        <div className="form-group">
-          <label htmlFor="email">Email</label>
-          <input
-            type="email"
-            id="email"
-            name="email"
-            className="form-control"
-            required
-          />
+        <div>
+          <i className="fas fa-phone-alt" />
+          <h4>+213 549663640</h4>
+          <p>Sunday to Thursday 8 Am to 6 Pm</p>
         </div>
-        <div className="form-group">
-          <label htmlFor="message">Message</label>
-          <textarea
-            id="message"
-            name="message"
-            className="form-control"
-            required
-          ></textarea>
+        <div>
+          <i className="far fa-envelope" />
+          <h4>nadjibmouhoun1@gmail.com</h4>
+          <p>Email us your query</p>
         </div>
-        <button type="submit" className="btn btn-primary">
-          Send
-        </button>
-      </form>
+        <a href="mailto:nadjibmouhoun1@gmail.com" className="btn">
+          SEND MESSAGE
+        </a>
+      </div>
     </section>
   );
 }
