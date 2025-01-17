@@ -8,10 +8,15 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 export default function Header() {
   const [activeLink, setActiveLink] = useState('home');
+  const [showOffcanvas, setShowOffcanvas] = useState(false);
   const expand = 'md';
 
   const handleSetActive = (to) => {
     setActiveLink(to);
+  };
+
+  const handleLinkClick = () => {
+    setShowOffcanvas(false);
   };
 
   return (
@@ -22,12 +27,19 @@ export default function Header() {
       fixed="top"
     >
       <Container fluid>
-        <Navbar.Brand href="#">Nadjib M</Navbar.Brand>
+        <Navbar.Brand href="#home">
+          <Link to="home" smooth={true} duration={500}>
+            Nadjib <span>M</span>
+          </Link>
+        </Navbar.Brand>
         <Navbar.Toggle
           aria-controls={`offcanvasNavbar-expand-${expand}`}
           className="navbar-toggler-white"
+          onClick={() => setShowOffcanvas(!showOffcanvas)}
         />
         <Navbar.Offcanvas
+          show={showOffcanvas}
+          onHide={() => setShowOffcanvas(false)}
           id={`offcanvasNavbar-expand-${expand}`}
           aria-labelledby={`offcanvasNavbarLabel-expand-${expand}`}
           placement="end"
@@ -48,6 +60,7 @@ export default function Header() {
                 duration={500}
                 className={`nav-link ${activeLink === 'home' ? 'active' : ''}`}
                 onSetActive={handleSetActive}
+                onClick={handleLinkClick}
               >
                 Home
               </Link>
@@ -57,6 +70,7 @@ export default function Header() {
                 duration={500}
                 className={`nav-link ${activeLink === 'about' ? 'active' : ''}`}
                 onSetActive={handleSetActive}
+                onClick={handleLinkClick}
               >
                 About
               </Link>
@@ -68,6 +82,7 @@ export default function Header() {
                   activeLink === 'skills' ? 'active' : ''
                 }`}
                 onSetActive={handleSetActive}
+                onClick={handleLinkClick}
               >
                 Skills
               </Link>
@@ -79,6 +94,7 @@ export default function Header() {
                   activeLink === 'projects' ? 'active' : ''
                 }`}
                 onSetActive={handleSetActive}
+                onClick={handleLinkClick}
               >
                 Projects
               </Link>
@@ -90,6 +106,7 @@ export default function Header() {
                   activeLink === 'contact' ? 'active' : ''
                 }`}
                 onSetActive={handleSetActive}
+                onClick={handleLinkClick}
               >
                 Contact
               </Link>

@@ -1,13 +1,104 @@
+/* start Global Styles */
+.section {
+  padding: 60px 40px;
+  min-height: 100vh;
+}
+
+.section h2 {
+  text-align: center;
+  font-size: 3rem;
+  margin-bottom: 40px;
+  color: #333;
+}
+
+.btn {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.btn:hover {
+  background-color: #0056b3; 
+  transform: scale(1.05); 
+  color: white;
+}
+
+.filter-buttons {
+  display: flex;
+  justify-content: center; 
+  flex-wrap: wrap; 
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.card-box {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  width: calc(33.333% - 20px);
+  text-align: center; 
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card-box:hover {
+  transform: translateY(-5px); 
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); 
+}
+
+.card-box h5 {
+  margin-top: 0;
+  color: #007bff;
+  font-size: 1.5rem;
+}
+
+.card-box p {
+  margin-bottom: 0;
+  color: #666; 
+}
+@media (max-width: 768px) {
+  .card-box {
+    width: calc(50% - 20px); 
+  }
+}
+
+@media (max-width: 480px) {
+  .card-box {
+    width: 100%; 
+  }
+
+  .card h1 {
+    font-size: 2.5rem; 
+  }
+}
+/* end Global Styles */
+
 /* start NavBar css */
 .navBar {
   background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url('./assets/image.png');
-  
 }
+
 .navBar .navbar-brand,
 .navBar .offcanvas-title {
   color: white !important;
 }
-
+.navBar .navbar-brand {
+  font-family: 'Pacifico', cursive;
+}
+.navBar .navbar-brand span {
+  color: #007bff;
+}
 
 .navBar .nav-link {
   cursor: pointer;
@@ -16,11 +107,11 @@
 }
 
 .navBar .nav-link:hover {
-  color: #94caff !important; /* Adjust the hover color if needed */
+  color: #007bff !important; 
 }
 
-.navBar .navbar-toggler {
-  border-color: white !important;
+.navBar .offcanvas-body .nav-link {
+  color: white !important;
 }
 
 .navBar .navbar-toggler-icon {
@@ -53,28 +144,39 @@
 /* end Home css */
 
 /* start About css */
-.about {
-  padding: 60px 0;
-
-}
-
 .about .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  height: 100vh;
+}
+
+@media (max-width: 768px) {
+  .about .container {
+    flex-direction: column;
+  }
+  .about h2 {
+    display: none;
+  }
+  .about .content {
+    width: 100%;
+  }
+  .personal-image {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  .about .content p {
+    text-align: center;
+  }
+
 }
 
 .about .content {
   width: 67%;
 }
 
-.about h1 {
-  font-size: 3rem;
-  margin-bottom: 40px;
-  color: #333;
-}
-.about .content p {
-  font-size: 1.1rem;
+.about h2 {
+  text-align: left;
 }
 
 .personal-image {
@@ -85,173 +187,31 @@
 
 /* Start Skills CSS */
 .skills {
-  padding: 60px 40px;
-  min-height: 100vh;
   background-color: #f4f4f4;
 }
-
-.skills h1 {
-  text-align: center;
-  font-size: 3rem;
-  margin-bottom: 40px;
-  color: #333; 
-}
-
-.skills .filter-buttons {
-  display: flex;
-  justify-content: center; /* Center-align buttons */
-  flex-wrap: wrap; /* Allow wrapping for responsiveness */
-  gap: 10px;
-  margin-bottom: 30px;
-}
-
-.skills .filter-buttons button {
-  padding: 10px 20px;
-  background-color: #007bff; /* Default blue for active */
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s, transform 0.2s; /* Smooth transitions */
-}
-
-.skills .filter-buttons button:hover {
-  background-color: #0056b3; /* Darker blue on hover */
-  transform: scale(1.05); /* Slight zoom effect */
-}
-
-.skills-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: center;
-}
-
-.skill-box {
-  background-color: #ffffff;
-  padding: 20px;
-  border-radius: 5px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  width: calc(33.333% - 20px);
-  text-align: center; 
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.skill-box:hover {
-  transform: translateY(-5px); /* Lift effect on hover */
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* More pronounced shadow */
-}
-
-.skill-box h3 {
-  margin-top: 0;
-  color: #007bff;
-  font-size: 1.5rem;
-}
-
-.skill-box p {
-  margin-bottom: 0;
-  color: #666; 
-}
-
-@media (max-width: 768px) {
-  .skill-box {
-    width: calc(50% - 20px); /* 2 columns on smaller screens */
-  }
-}
-
-@media (max-width: 480px) {
-  .skill-box {
-    width: 100%; /* Full-width on very small screens */
-  }
-
-  .skills h1 {
-    font-size: 2.5rem; /* Adjust heading size for small screens */
-  }
-}
-
 /* end Skills css */
 
 /* start Projects css */
-.projects {
-  padding: 100px 20px;
-  min-height: 100vh;
+.projects .card-box {
+  background-color: #f4f4f4;
 }
 
-.filter-buttons {
-  margin-bottom: 20px;
+.projects .card-box .btn {
+  opacity: 0.7;
+  padding: 4px 8px;
+  margin-top: 20px;
+  font-size: small;
 }
-
-.filter-buttons button {
-  margin-right: 10px;
-  padding: 10px 20px;
-  background-color: #007bff;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.filter-buttons button:hover {
-  background-color: #0056b3;
-}
-
-.row {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-}
-
-.col-md-4 {
-  flex: 1 1 calc(33.333% - 20px);
-}
-
-.card {
-  background-color: #f8f9fa;
-  padding: 20px;
-  border-radius: 5px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-.card-body {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.card-title {
-  margin-top: 0;
-}
-
-.card-text {
-  margin-bottom: 20px;
-}
-
-.btn {
-  background-color: #007bff;
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  text-decoration: none;
-  cursor: pointer;
-}
-
-.btn:hover {
-  background-color: #0056b3;
+.projects .card-box .btn:hover {
+  opacity: 1;
 }
 /* end Projects css */
 
 /* start Contact css */
 .contact {
   background-color: #F4F4F4;
-  padding: 60px 0;
-  
+  min-height: 80vh;
 }
-.contact h1 {
-  text-align: center;
-  margin-bottom: 60px;
-}
-
 .contact .contact-info {
   display: flex;
   justify-content: space-around;
@@ -264,11 +224,11 @@
   }
   .contact .contact-info iframe {
     margin-bottom: 30px;
+    width: 100%;
   }
   
 }
 /* end Contact css */
-
 
 /*start footer css */
 .footer {
@@ -281,7 +241,9 @@
   text-align: center;
   font-size: large;
 }
+@media (max-width: 768px) {
+  .footer p {
+    font-size: small;
+  }
+}
 /*end footer css */
-
-
-

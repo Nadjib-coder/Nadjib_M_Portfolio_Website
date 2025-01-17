@@ -29,23 +29,31 @@ export default function Skills() {
 
   return (
     <section id="skills" className="section skills">
-      <h1>Skills</h1>
+      <h2>Skills</h2>
       <div className="filter-buttons">
-        <button onClick={() => handleCategoryChange('All')}>All</button>
-        <button onClick={() => handleCategoryChange('Automation')}>
+        <button className="btn" onClick={() => handleCategoryChange('All')}>
+          All
+        </button>
+        <button
+          className="btn"
+          onClick={() => handleCategoryChange('Automation')}
+        >
           Automation
         </button>
-        <button onClick={() => handleCategoryChange('Software Engineering')}>
+        <button
+          className="btn"
+          onClick={() => handleCategoryChange('Software Engineering')}
+        >
           Software Engineering
         </button>
       </div>
       <div className="current-category">
         <p>Current Category: {category}</p>
       </div>
-      <div className="skills-container">
+      <div className="card-container">
         {filteredSkills.map((skill) => (
-          <div key={skill.id} className="skill-box">
-            <h3>{skill.title}</h3>
+          <div key={skill.id} className="card-box">
+            <h5>{skill.title}</h5>
             <p>{skill.description}</p>
           </div>
         ))}

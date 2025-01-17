@@ -1,7 +1,7 @@
 export default function About() {
   return (
     <>
-      <section id="about" className="about-us-content about">
+      <section id="about" className="about-us-content about section">
         <div className="container">
           <img
             className="personal-image"
@@ -9,7 +9,7 @@ export default function About() {
             alt="Nadjib Mouhoun"
           />
           <div className="content">
-            <h1>About Me</h1>
+            <h2>About Me</h2>
             <p>
               Hello, I am Nadjib Mouhoun, a dedicated Automation and Software
               Engineer
@@ -28,7 +28,7 @@ export default function About() {
               <br />
             </p>
             <a className="cv" href="/cv/Resume.pdf" download>
-              <p>Download CV</p>
+              <p className="btn">Download CV</p>
             </a>
           </div>
         </div>

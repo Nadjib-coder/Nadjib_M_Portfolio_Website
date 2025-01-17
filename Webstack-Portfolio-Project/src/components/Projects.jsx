@@ -33,15 +33,26 @@ export default function Projects() {
     <section id="projects" className="section projects">
       <h2>Projects</h2>
       <div className="filter-buttons">
-        <button onClick={() => handleCategoryChange('All')}>All</button>
-        <button onClick={() => handleCategoryChange('fullstack')}>
+        <button className="btn" onClick={() => handleCategoryChange('All')}>
+          All
+        </button>
+        <button
+          className="btn"
+          onClick={() => handleCategoryChange('fullstack')}
+        >
           Fullstack
         </button>
-        <button onClick={() => handleCategoryChange('frontend')}>
+        <button
+          className="btn"
+          onClick={() => handleCategoryChange('frontend')}
+        >
           Frontend
         </button>
-        <button onClick={() => handleCategoryChange('backend')}>Backend</button>
+        <button className="btn" onClick={() => handleCategoryChange('backend')}>
+          Backend
+        </button>
         <button
+          className="btn"
           onClick={() => handleCategoryChange('algorithm/data structure')}
         >
           Algorithm / Data Structure
@@ -50,23 +61,19 @@ export default function Projects() {
       <div className="current-category">
         <p>Current Category: {category}</p>
       </div>
-      <div className="row">
+      <div className="card-container">
         {filteredProjects.map((project) => (
-          <div key={project.id} className="col-md-4">
-            <div className="card">
-              <div className="card-body">
-                <h5 className="card-title">{project.name}</h5>
-                <p className="card-text">{project.description}</p>
-                <a
-                  href={project.githubLink}
-                  className="btn btn-primary"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  View on GitHub
-                </a>
-              </div>
-            </div>
+          <div key={project.id} className="card-box">
+            <h5>{project.name}</h5>
+            <p>{project.description}</p>
+            <a
+              href={project.githubLink}
+              className="btn"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              View on GitHub
+            </a>
           </div>
         ))}
       </div>
