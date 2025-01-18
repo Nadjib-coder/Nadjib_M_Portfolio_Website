@@ -86,7 +86,7 @@
 
 /* start NavBar css */
 .navBar {
-  background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url('./assets/image.png');
+  background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url('./assets/image.jpg');
 }
 
 .navBar .navbar-brand,
@@ -128,7 +128,7 @@
   color: #fff;
   min-height: 100vh;
   width: 100%;
-  background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url('/assets/image.png');
+  background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url('/assets/image.jpg');
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -154,6 +154,7 @@
 @media (max-width: 768px) {
   .about .container {
     flex-direction: column;
+    justify-content: center;
   }
   .about h2 {
     display: none;
@@ -162,11 +163,12 @@
     width: 100%;
   }
   .personal-image {
-    width: 100%;
+    width: 100% !important;
     margin-bottom: 30px;
   }
-  .about .content p {
+  .about .content {
     text-align: center;
+    width: 100% !important;
   }
 
 }
