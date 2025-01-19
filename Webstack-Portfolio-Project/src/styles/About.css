@@ -1,0 +1,42 @@
+/* Start About css */
+.about .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100vh;
+}
+
+@media (max-width: 768px) {
+  .about .container {
+    flex-direction: column;
+    justify-content: center;
+  }
+  .about h2 {
+    display: none;
+  }
+  .about .content {
+    width: 100%;
+  }
+  .personal-image {
+    width: 100% !important;
+    margin-bottom: 30px;
+  }
+  .about .content {
+    text-align: center;
+    width: 100% !important;
+  }
+}
+
+.about .content {
+  width: 67%;
+}
+
+.about h2 {
+  text-align: left;
+}
+
+.personal-image {
+  width: 27%;
+  border-radius: 10px;
+}
+/* End About css */

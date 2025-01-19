@@ -1,4 +1,4 @@
-import Header from './components/Header';
+import NavBar from './components/NavBar';
 import Home from './components/Home';
 import About from './components/About';
 import Skills from './components/Skills';
@@ -10,7 +10,7 @@ import './App.css';
 export default function App() {
   return (
     <>
-      <Header />
+      <NavBar />
       <Home />
       <About />
       <Skills />

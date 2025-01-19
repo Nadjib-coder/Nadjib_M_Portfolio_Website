@@ -1,0 +1,16 @@
+/* Start Projects css */
+.projects .card-box {
+    background-color: #f4f4f4;
+}
+  
+.projects .card-box .btn {
+    opacity: 0.7;
+    padding: 4px 8px;
+    margin-top: 20px;
+    font-size: small;
+}
+
+.projects .card-box .btn:hover {
+    opacity: 1;
+}
+/* End Projects css */

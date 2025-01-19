@@ -1,7 +1,9 @@
+import '../styles/About.css';
+
 export default function About() {
   return (
     <>
-      <section id="about" className="about-us-content about section">
+      <section id="about" className="about section">
         <div className="container">
           <img
             className="personal-image"

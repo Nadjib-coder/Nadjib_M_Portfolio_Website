@@ -1,0 +1,36 @@
+/* Start NavBar css */
+.navBar {
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url('./assets/image.jpg');
+}
+
+.navBar .navbar-brand,
+.navBar .offcanvas-title {
+  color: white !important;
+}
+
+.navBar .navbar-brand {
+  font-family: 'Pacifico', cursive;
+}
+
+.navBar .navbar-brand span {
+  color: #007bff;
+}
+
+.navBar .nav-link {
+  cursor: pointer;
+  text-decoration: none;
+  color: white !important;
+}
+
+.navBar .nav-link:hover {
+  color: #007bff !important; 
+}
+
+.navBar .offcanvas-body .nav-link {
+  color: white !important;
+}
+
+.navBar .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba%28255, 255, 255, 1%29' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E") !important;
+}
+/* End NavBar css */

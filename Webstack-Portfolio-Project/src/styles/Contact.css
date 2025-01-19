@@ -1,0 +1,23 @@
+/* Start Contact css */
+.contact{
+    background-color: #F4F4F4;
+}
+
+.contact .contact-info {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row-reverse;
+}
+
+@media screen and (max-width: 768px) {
+    .contact .contact-info {
+        flex-direction: column;
+    }
+    .contact .contact-info iframe {
+        margin-bottom: 30px;
+        width: 100%;
+    }
+}
+/* End Contact css */
+  

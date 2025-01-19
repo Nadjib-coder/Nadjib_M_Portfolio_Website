@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
+import '../styles/Skills.css';
 
 export default function Skills() {
   const [skills, setSkills] = useState([]);

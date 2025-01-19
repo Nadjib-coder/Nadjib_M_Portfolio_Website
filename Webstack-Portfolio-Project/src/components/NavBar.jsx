@@ -5,8 +5,9 @@ import Navbar from 'react-bootstrap/Navbar';
 import Offcanvas from 'react-bootstrap/Offcanvas';
 import { Link } from 'react-scroll';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import '../styles/NavBar.css';
 
-export default function Header() {
+export default function NavBar() {
   const [activeLink, setActiveLink] = useState('home');
   const [showOffcanvas, setShowOffcanvas] = useState(false);
   const expand = 'md';

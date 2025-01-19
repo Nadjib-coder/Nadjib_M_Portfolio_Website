@@ -1,6 +1,8 @@
+import '../styles/Contact.css';
+
 export default function Contact() {
   return (
-    <section id="contact" className="section contact">
+    <section id="contact" className="contact section">
       <h2>Contact Me</h2>
       <div className="contact-info">
         <iframe
