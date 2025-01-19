@@ -3,28 +3,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 100vh;
-}
-
-@media (max-width: 768px) {
-  .about .container {
-    flex-direction: column;
-    justify-content: center;
-  }
-  .about h2 {
-    display: none;
-  }
-  .about .content {
-    width: 100%;
-  }
-  .personal-image {
-    width: 100% !important;
-    margin-bottom: 30px;
-  }
-  .about .content {
-    text-align: center;
-    width: 100% !important;
-  }
+  height: 100vh; /* Full viewport height */
 }
 
 .about .content {
@@ -38,5 +17,27 @@
 .personal-image {
   width: 27%;
   border-radius: 10px;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+  .about .container {
+    flex-direction: column;
+    justify-content: center;
+  }
+  .about h2 {
+    display: none; /* Hide the heading on small screens */
+  }
+  .about .content {
+    width: 100%; /* Full width for content */
+  }
+  .personal-image {
+    width: 100% !important; /* Full width for image */
+    margin-bottom: 30px;
+  }
+  .about .content {
+    text-align: center; /* Center text on small screens */
+    width: 100% !important; /* Full width for content */
+  }
 }
 /* End About css */

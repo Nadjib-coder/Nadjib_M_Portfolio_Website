@@ -11,6 +11,7 @@
     font-size: large;
 }
 
+/* Responsive adjustments for smaller screens */
 @media (max-width: 768px) {
     .footer p {
         font-size: small;

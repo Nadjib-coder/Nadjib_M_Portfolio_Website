@@ -10,6 +10,7 @@
     flex-direction: row-reverse;
 }
 
+/* Responsive adjustments for smaller screens */
 @media screen and (max-width: 768px) {
     .contact .contact-info {
         flex-direction: column;

@@ -1,10 +1,18 @@
-/* Reset and Base Styles */
+/* Reset and Base Styles 
+
+  The following styles are used to reset and normalize the default styling
+  provided by browsers.
+  This ensures a consistent baseline for styling across different browsers and devices.
+*/
+
+/* Apply box-sizing: border-box to all elements and pseudo-elements */
 *, *::before, *::after {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 
+/* Remove default margin and padding from all elements */
 * {
   margin: 0;
   padding: 0;
