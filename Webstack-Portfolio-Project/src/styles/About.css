@@ -24,6 +24,7 @@
   .about .container {
     flex-direction: column;
     justify-content: center;
+    height: auto;
   }
   .about h2 {
     display: none; /* Hide the heading on small screens */
@@ -32,7 +33,7 @@
     width: 100%; /* Full width for content */
   }
   .personal-image {
-    width: 100% !important; /* Full width for image */
+    width: 90% !important; /* Full width for image */
     margin-bottom: 30px;
   }
   .about .content {
