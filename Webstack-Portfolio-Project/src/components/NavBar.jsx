@@ -8,14 +8,16 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import '../styles/NavBar.css';
 
 export default function NavBar() {
-  const [activeLink, setActiveLink] = useState('home');
-  const [showOffcanvas, setShowOffcanvas] = useState(false);
-  const expand = 'md';
+  const [activeLink, setActiveLink] = useState('home'); // State to track the active link
+  const [showOffcanvas, setShowOffcanvas] = useState(false); // State to control the offcanvas visibility
+  const expand = 'md'; // Define the breakpoint for expanding the navbar
 
+  // Function to handle setting the active link
   const handleSetActive = (to) => {
     setActiveLink(to);
   };
 
+  // Function to handle link click and close the offcanvas menu
   const handleLinkClick = () => {
     setShowOffcanvas(false);
   };

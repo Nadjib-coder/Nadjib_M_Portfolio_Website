@@ -3,27 +3,30 @@ import axios from 'axios';
 import '../styles/Skills.css';
 
 export default function Skills() {
-  const [skills, setSkills] = useState([]);
-  const [filteredSkills, setFilteredSkills] = useState([]);
-  const [category, setCategory] = useState('All');
+  const [skills, setSkills] = useState([]); // State to store all skills
+  const [filteredSkills, setFilteredSkills] = useState([]); // State to store filtered skills based on category
+  const [category, setCategory] = useState('All'); // State to track the selected category
 
+  // Fetch skills data from the MockAPI when the component mounts
   useEffect(() => {
     axios
       .get('https://675df94e63b05ed079794401.mockapi.io/portfolio-api/skills')
       .then((response) => {
-        setSkills(response.data);
-        setFilteredSkills(response.data);
+        setSkills(response.data); // Set the skills state with the fetched data
+        setFilteredSkills(response.data); // Initially, set filtered skills to all skills
       })
       .catch((error) => {
-        console.error('Error fetching skills:', error);
+        console.error('Error fetching skills:', error); // Log any errors for debugging
       });
   }, []);
 
+  // Function to handle category change and filter skills based on the selected category
   const handleCategoryChange = (category) => {
-    setCategory(category);
+    setCategory(category); // Update the selected category
     if (category === 'All') {
-      setFilteredSkills(skills);
+      setFilteredSkills(skills); // Show all skills if 'All' is selected
     } else {
+      // Filter skills based on the selected category
       setFilteredSkills(skills.filter((skill) => skill.category === category));
     }
   };
