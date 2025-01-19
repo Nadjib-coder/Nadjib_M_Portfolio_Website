@@ -1,6 +1,6 @@
 /* Start NavBar css */
 .navBar {
-    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url('./assets/image.jpg');
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url('../../public/assets/image.jpg');
 }
 
 .navBar .navbar-brand,
