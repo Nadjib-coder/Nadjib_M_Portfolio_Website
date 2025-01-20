@@ -14,13 +14,22 @@ I am Nadjib Mouhoun, a passionate software engineer who has completed the ALX So
 - **Projects Page**: A detailed showcase of all the projects I have completed during the ALX Software Engineering program.
 - **Contact Page**: A way to get in touch with me.
 
+## Skills
+
+Here are some of my skills you will find on my website:
+
+1. **Python**: A versatile language for scripting, web development, and data analysis.
+2. **React.js**: A JavaScript library for building user interfaces.
+3. **Node.js**: A runtime environment for executing JavaScript on the server side.
+4. **And many more...**
+
 ## Projects
 
 Here are some of the key projects you will find on my website:
 
-1. **Project 1**: Description of the first project.
-2. **Project 2**: Description of the second project.
-3. **Project 3**: Description of the third project.
+1. **AirBnB Clone**: The goal of the AirBnB project is to eventually deploy our server as a simple copy of the AirBnB Website (HBnB).
+2. **Firify App**: The frontend implementation for wildfire management.
+3. **ALX System Engineering Devops**: evOps and system engineering tasks focusing on shell scripting, networking, APIs, and debugging.
 4. **And many more...**
 
 ## Technologies Used
@@ -31,6 +40,9 @@ Here are some of the key projects you will find on my website:
 - React.Js
 - Mock API
 - Axios
+- Bootstrap 5
+- Git/github
+- netflify
 
 ## Contact
 
