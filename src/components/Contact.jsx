@@ -21,7 +21,7 @@ export default function Contact() {
           </div>
           <div>
             <i className="fas fa-phone-alt" />
-            <h4>+351 938105024</h4>
+            <h4>+351 931661866</h4>
             <p>Monday to Friday 8 Am to 6 Pm</p>
           </div>
           <div>
